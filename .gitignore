@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# So you don't want API keys in public code
+# Cause then anyone can use them
+# So we put them in a .env file, then reference that file in the code
+# And that file is not pushed to Git
+.env
