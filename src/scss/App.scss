@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #fefefe;
+$dark: #343a40;
+$black: #212529;
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace;
+
+body {
+  font-family: $font-family-sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  font-size: 1rem;
+  color: $black;
+  background-color: $light;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.rfu {
+  &-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem !important;
+    height: 70px;
+    font-weight: 300;
+    background-color: $white !important;
+    box-shadow: none;
+    border-bottom: 1px solid #f3f3f3;
+
+    &-navigation {
+      display: flex;
+      justify-content: space-between;
+      font-family: Roboto, Roboto !important;
+      line-height: 15px;
+      font-size: 12px;
+      text-align: center;
+      font-weight: 500;
+      @media (max-width: $breakpoint-lg) {
+        width: 75%;
+      }
+      width: 60%;
+    }
+  }
+  &-container {
+    display: flex;
+    width: 100%;
+  }
+  &-sidebar {
+    width: 20%;
+    background-color: $light;
+  }
+  &-content {
+    border-left: 1px solid rgba($gray, 0.15);
+    width: 80%;
+  }
+  &-title {
+    font-weight: 300;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    margin: 0px;
+    color: $gray-dark;
+  }
+  &-text {
+    &__loading {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 200;
+      color: $gray;
+    }
+  }
+
+  &-card {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba($gray, 0.2);
+    margin-bottom: 10px;
+    -webkit-box-shadow: 1px 1px 5px -4px rgba($black, 0.39);
+    box-shadow: 1px 1px 5px -4px rgba($black, 0.39);
+    &-container {
+      padding: 10px;
+    }
+    &__club {
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+        -webkit-box-shadow: 1px 1px 10px -4px rgba($black, 0.39);
+        box-shadow: 1px 1px 10px -4px rgba($black, 0.39);
+      }
+    }
+    &-title {
+      padding: 0;
+      margin: 0 0 10px 0;
+      font-weight: 400;
+      font-size: 1.15em;
+      text-transform: uppercase;
+      color: darken($red, 30);
+    }
+    &-address {
+      & > p {
+        margin: 0 0 3px 0;
+        padding: 0;
+      }
+    }
+  }
+  &-input {
+    font-size: 20px;
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    border: 0px;
+    background-color: $light;
+    border-bottom: 1px solid rgba($gray, 0.3);
+  }
+  &-header {
+    position: sticky;
+    top: 71px;
+
+    background-color: $white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba($gray, 0.15);
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
