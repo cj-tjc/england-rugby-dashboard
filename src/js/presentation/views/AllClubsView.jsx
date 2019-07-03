@@ -25,7 +25,7 @@ export default class ClubsView extends Component {
         'https://api.eu-gb.apiconnect.appdomain.cloud/rfu-rfu-digital--production/rfu/clubs',
         {
           headers: {
-            'x-ibm-client-id': 'b60eb49b-1477-43bf-b882-8f7f322702aa'
+            'x-ibm-client-id': process.env.REACT_APP_RFU_API_KEY
           },
           timeout: 10000
         }

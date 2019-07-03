@@ -20,7 +20,7 @@ class ClubView extends Component {
         `https://api.eu-gb.apiconnect.appdomain.cloud/rfu-rfu-digital--production/rfu/clubs/${clubId}`,
         {
           headers: {
-            'x-ibm-client-id': 'b60eb49b-1477-43bf-b882-8f7f322702aa'
+            'x-ibm-client-id': process.env.REACT_APP_RFU_API_KEY
           },
           timeout: 10000
         }
@@ -45,6 +45,13 @@ class ClubView extends Component {
         <div className="rfu-header">
           <h1 className="rfu-title">{name || 'Loading...'}</h1>
         </div>
+        {fetchErrored ? (
+          <h2 className="rfu-text__loading">
+            Failed to load Club data.
+            <br />
+            {error}
+          </h2>
+        ) : null}
         {contentLoaded ? (
           <pre style={{ padding: 10 }}>{JSON.stringify(data, null, 2)}</pre>
         ) : null}

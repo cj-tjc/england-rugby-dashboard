@@ -46,6 +46,14 @@ body {
 }
 
 .rfu {
+  // Just gonna implement Redux - what the fuck is Redux - remember I have to somehow maintain/build on this when you aren't here 😂
+  // Enjoy the weird code
+  // Don't worry, you'll work it out - thats really good advice... xD
+  // also... some guy keeps asking me for the code as it is atm...
+  // We'll do that later, I'll pass it over when I've cleaned it up yeah
+  // Gimme 2 hours
+  // is there any way you could literally just zip it so I can shut him up because hes being so fkin annoying 😂
+  // Yeah sure will do- sorry to eb a pain... I'm gonna keep working on it on here tho
   &-navbar {
     position: sticky;
     top: 0;
@@ -70,6 +78,10 @@ body {
       font-weight: 500;
       @media (max-width: $breakpoint-lg) {
         width: 75%;
+      }
+      & > a {
+        color: $black;
+        text-decoration: none;
       }
       width: 60%;
     }
@@ -144,6 +156,10 @@ body {
     border: 0px;
     background-color: $light;
     border-bottom: 1px solid rgba($gray, 0.3);
+
+    &:focus {
+      outline: none;
+    }
   }
   &-header {
     position: sticky;
